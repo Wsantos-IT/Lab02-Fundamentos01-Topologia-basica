@@ -26,17 +26,6 @@ Protocolos y Tecnologías trabajadas: VLAN, DHCP, DNS, CDP, SSH
 
 ---
 
-##  SKILLS
-- Configuración Inicial y puesta en marcha de Switches y Routers Cisco
-- Configuración de VLANS
-- Configuración de interfaces
-- Configuración/Troubleshooting de protocolos DNS, DHCP, SSH, CDP.
-- Capturar tráfico y analizarlo en Wireshark
-- Conocimiento de Protocolos
-- Conocimiento seguridad básica
-
----
-
 ##  Topología de la Red
 Microsoft Visio
 
@@ -152,12 +141,11 @@ SW1(config-if)# no cdp enable
 
 <img width="746" alt="SSH PC1 a R1" src="./imagenes/PC1-ssh-r1.png" />
 
-## 📁 Estructura del Repositorio
-```text
-├── Topologia Eve-NG/        # Archivo .unl exportado para replicar el laboratorio
-├── configuraciones/         # Scripts limpios en formato .txt
-│   ├── Config_Basica_SW.txt # Acceso SSH, banners y seguridad global
-│   └── R1_Especifico.txt    # Subinterfaces ROAS y DHCP pools
-├── imagenes/                # Capturas de pantalla de la topología y Wireshark
-└── README.md                # Portada y documentación del proyecto
-```
+##  Skills Learned
+- Configuración Inicial y puesta en marcha de Switches y Routers Cisco
+- Configuración de VLANS
+- Configuración de interfaces
+- Configuración/Troubleshooting de protocolos DNS, DHCP, SSH, CDP.
+- Capturar tráfico y analizarlo en Wireshark
+- Conocimiento de Protocolos
+- Conocimiento seguridad básica

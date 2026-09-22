@@ -1,0 +1,40 @@
+! --- R1 Config --- !
+interface loopback 0
+ip address 1.1.1.1 255.255.255.255
+exit
+!
+! --- Router on a stick --- !
+interface e0/0
+description TRUNK_TO_SW1
+no shutdown
+exit
+!
+interface e0/0.10
+encapsulation dot1q 10
+ip address 192.168.10.1 255.255.255.0
+exit
+!
+interface e0/0.20
+encapsulation dot1q 20
+ip address 192.168.20.1 255.255.255.0
+exit
+!
+interface e0/0.99
+encapsulation dot1q 99
+ip address 192.168.99.1 255.255.255.0
+exit
+!
+! --- DHCP, DNS --- !
+ip dns server
+ip dhcp excluded-address 192.168.10.1 192.168.10.10
+ip dhcp excluded-address 192.168.20.1 192.168.20.10
+ip dhcp pool USERS_Ventas
+network 192.168.10.0 255.255.255.0
+default-router 192.168.10.1
+dns-server 192.168.10.1
+exit
+ip dhcp pool USERS_Marketing
+network 192.168.20.0 255.255.255.0
+default-router 192.168.20.1
+dns-server 192.168.20.1
+exit
